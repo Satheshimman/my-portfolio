@@ -1,0 +1,308 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+  font-family: "Inter", sans-serif;
+}
+
+::-webkit-scrollbar {
+  background-color: transparent;
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(transparent, var(--primarycolor), transparent);
+}
+
+li {
+  list-style: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+.navbar li span {
+  position: relative;
+}
+.navbar li span::after {
+  content: "";
+  position: absolute;
+  background-color: #28e98c;
+  height: 3px;
+  width: 0%;
+  bottom: -7px;
+  left: 50%;
+  transform-origin: bottom right;
+  pointer-events: none;
+  transition: 0.3s;
+  border-radius: 10px;
+}
+.navbar li span:hover::after {
+  transition: 0.3s;
+  left: 0px;
+  width: 100%;
+}
+
+a {
+  text-decoration: none !important;
+}
+.hireme a:hover {
+  color: white;
+}
+
+li a {
+  text-decoration: none;
+  color: white;
+}
+:root {
+  --primarycolor: #28e98c;
+  --backgroundcolor: #1f1f1f;
+  --bordercolor: rgba(211, 211, 211, 0.39);
+}
+
+.text-bold {
+  font-weight: 600;
+}
+
+.side-header {
+  position: fixed;
+  display: flex;
+  align-content: center;
+  border: 2px solid var(--bordercolor);
+}
+
+.header-border {
+  padding: 10px 10px;
+  border-radius: 20px;
+}
+
+.icon-border {
+  border: 2px solid var(--bordercolor);
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  text-align: center;
+  line-height: 45px;
+  border-radius: 50%;
+  color: white;
+  font-size: 20px;
+  transition: all 0.2s linear;
+}
+
+.icon-border:hover {
+  transform: scale(1.1);
+  transition: all 0.2s linear;
+  border: 2px solid var(--primarycolor);
+  box-shadow: 0px 0px 10px var(--primarycolor), 0px 0px 20px var(--primarycolor);
+  color: var(--primarycolor);
+}
+.hire {
+  background-color: var(--primarycolor);
+  padding: 15px 40px;
+  transition: all 0.2s linear;
+  border-radius: 50px;
+  color: white;
+}
+
+.hire:hover {
+  box-shadow: 0px 0px 20px var(--primarycolor), 0px 0px 40px var(--primarycolor);
+  transition: all 0.2s linear;
+}
+
+.heading-border {
+  border: 1px solid var(--bordercolor);
+  padding: 2px 20px;
+  border-radius: 30px;
+}
+.sideBorder {
+  border-left: 2px solid #494949;
+}
+
+.round {
+  position: relative;
+}
+.borderRound::after {
+  content: "";
+  background-color: #494949;
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  top: 0px !important;
+  left: -11px;
+  border-radius: 50%;
+}
+
+.htmlround {
+  position: relative;
+  background: conic-gradient(var(--primarycolor) 288deg, transparent 0deg);
+  border-radius: 50%;
+  border: 1px solid var(--primarycolor);
+}
+
+.cssround {
+  position: relative;
+  background: conic-gradient(var(--primarycolor) 270deg, transparent 0deg);
+  border: 1px solid var(--primarycolor);
+  border-radius: 50%;
+}
+
+.bootround {
+  position: relative;
+  background: conic-gradient(var(--primarycolor) 270deg, transparent 0deg);
+  border: 1px solid var(--primarycolor);
+  border-radius: 50%;
+}
+
+.jsround {
+  position: relative;
+  background: conic-gradient(var(--primarycolor) 245deg, transparent 0deg);
+  border: 1px solid var(--primarycolor);
+  border-radius: 50%;
+}
+
+.reactround {
+  position: relative;
+  background: conic-gradient(var(--primarycolor) 216deg, transparent 0deg);
+  border: 1px solid var(--primarycolor);
+  border-radius: 50%;
+}
+.uiround {
+  position: relative;
+  background: conic-gradient(var(--primarycolor) 180deg, transparent 0deg);
+  border: 1px solid var(--primarycolor);
+  border-radius: 50%;
+}
+.details {
+  position: absolute;
+  background-color: var(--backgroundcolor);
+  top: 8%;
+  left: 8%;
+  right: 8%;
+  bottom: 8%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--primarycolor);
+}
+.projectimg {
+  position: relative;
+}
+.projectdemo {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  inset: 0;
+  transition: all 0.3s ease-in-out;
+}
+.projectimg:hover .projectdemo {
+  background-color: #1f1f1f;
+  transition: all 0.3s ease-in-out;
+}
+
+.projectimg:hover .projectdemo a {
+  visibility: visible;
+  transition: all 0.3s ease-in-out;
+}
+.projectdemo a {
+  color: white;
+  visibility: hidden;
+  transition: all 0.2s ease-in-out;
+  background-color: var(--primarycolor);
+  padding: 15px 50px;
+  display: inline-block;
+  border-radius: 10px;
+}
+
+.projectdemo a:hover {
+  box-shadow: 0px 0px 20px var(--primarycolor), 0px 0px 40px var(--primarycolor);
+  color: white;
+}
+
+.show {
+  animation: showing 0.5s linear forwards;
+  position: relative;
+  opacity: 0;
+}
+@keyframes showing {
+  0% {
+    opacity: 0;
+    top: -50%;
+  }
+  25% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    top: 0%;
+  }
+}
+
+.navicons i {
+  border: 2px solid var(--primarycolor);
+  padding: 5px 8px;
+  border-radius: 50%;
+  transition: all 0.5s ease-in-out;
+}
+.navicons i:hover {
+  box-shadow: 0px 0px 10px var(--primarycolor), 0px 0px 20px var(--primarycolor);
+  transform: translateY(-8px);
+  transition: all 0.5s ease-in-out;
+}
+.smallnavbar {
+  position: fixed;
+  bottom: 20px;
+  width: 100%;
+  background-color: #1f1f1f;
+}
+
+.cursoranime {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  border: 1px solid var(--primarycolor);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.1s linear;
+  z-index: -10;
+  pointer-events: none;
+}
+
+.raineffect {
+  position: absolute;
+  color: var(--primarycolor);
+  z-index: -5;
+  animation: raineffect 2s linear forwards;
+  bottom: 0px;
+  overflow: hidden;
+}
+#rainclass {
+  position: relative;
+}
+@keyframes raineffect {
+  0% {
+    transform: translateY(0vh);
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-100vh);
+  }
+}
+
+@media (min-width: 320px) and (max-width: 640px) {
+  .header-border {
+    border: none;
+  }
+}
